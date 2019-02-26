@@ -1,6 +1,6 @@
-import greet from './greeting';
-
-console.log('This is index.js!!!');
-
-let x = 'xxxxx';
-console.log(greet('Gaychey' + x));
+export default class TinyGallery {
+    constructor() {
+        console.log('I\'m in the TinyGallery class');
+    }
+}
+console.log('blah');

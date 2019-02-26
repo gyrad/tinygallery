@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TinyGallery</title>
 </head>
+
 <body>
+    <div class="gallery">
+        <a href="https://images.pexels.com/photos/545968/pexels-photo-545968.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            class="gallery__link">
+            <img src="https://images.pexels.com/photos/545968/pexels-photo-545968.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
+                alt="Sunset by the lake." class="gallery__image" data-caption="The beautiful sky at sunset from our lakehouse.">
+        </a>
+
+        <a href="https://images.pexels.com/photos/591216/pexels-photo-591216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
+            class="gallery__link">
+            <img src="https://images.pexels.com/photos/591216/pexels-photo-591216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
+                alt="Hiking through the woods." class="gallery__image" data-caption="Tenzin and Sonam hiking through the woods.">
+        </a>
+
+        <a href="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            class="gallery__link">
+            <img src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
+                alt="Mountain peak." class="gallery__image" data-caption="The majestic Fishtail mountain.">
+        </a>
+    </div>
+
     <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let tinyGallery = new TinyGallery();
+            tinyGallery();
+        });
+    </script>
 </body>
+
 </html>
