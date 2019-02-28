@@ -10,7 +10,7 @@ module.exports = {
         libraryTarget: 'umd',
         libraryExport: 'default',
         path: path.resolve(__dirname, 'dist'),
-        filename: 'index.js'
+        filename: 'tinygallery.min.js'
     },
     module: {
         rules: [{
@@ -40,7 +40,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'styles.css',
+            filename: 'tinygallery.min.css',
         })
     ]
 }

@@ -13,7 +13,7 @@ export default class TinyGallery {
         this.openState = false;
         this.index = null;
         this.mouseTime = null;
-        this.timeCloseTransitionTime = .5 * 1000; // in milliseconds
+        this.imageCloseTransitionTime = .4 * 1000; // in milliseconds
     }
     init() {
         // renders litebox to DOM
