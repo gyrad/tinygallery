@@ -70,7 +70,7 @@ h1 {
 }
 
 .litebox {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
@@ -82,7 +82,7 @@ h1 {
     transition: opacity .3s ease, visibility 1s;
 
     &__container {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
