@@ -4,7 +4,7 @@ A simple javascript image gallery.
 [Demo](https://gyrad.github.io/tinygallery/)
 
 ## Usage
-Copy `tinygallery.min.css` and `tinygallery.min.js` from the [/dist](tree/master/dist) folder to your website.
+Copy `tinygallery.min.css` and `tinygallery.min.js` from the [/dist](../tree/master/dist) folder to your website.
 Alternatively, you can link to those files hosted on a CDN:
 ```
 https://cdn.jsdelivr.net/gh/gyrad/tinygallery/dist/tinygallery.min.css
