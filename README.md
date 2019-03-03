@@ -8,13 +8,13 @@ Copy `tinygallery.min.css` and `tinygallery.min.js` to your website.
 
 Include `tinygallery.min.css` in the head section of your webpage:
 
-```
+```html
 <link rel="stylesheet" href="tinygallery.min.css">
 ```
 
 Include `tinygallery.min.js` at the bottom of the body of your webpage just before the closing `</body>` tag:
 
-```
+```html
 <script src="tinygallery.min.js"></script>
 ```
 
@@ -36,7 +36,7 @@ Create a list of links to image files with enclosed thumbnails and add them to t
 
 Add the following JavaScript code after including the **_tinygallery_** script, to display the images. Change the `'.gallery'` to the CSS selector that contains the list of linked images.
 
-```
+```js
 <script>
     const tg = new TinyGallery('.gallery');
     tg.init();
