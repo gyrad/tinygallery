@@ -4,21 +4,26 @@ A simple javascript image gallery.
 [Demo](https://gyrad.github.io/tinygallery/)
 
 ## Usage
-Copy `tinygallery.min.css` and `tinygallery.min.js` to your website.
+Copy `tinygallery.min.css` and `tinygallery.min.js` from the [/dist](tree/master/dist) folder to your website.
+Alternatively, you can link to those files hosted on a CDN:
+```
+https://cdn.jsdelivr.net/gh/gyrad/tinygallery/dist/tinygallery.min.css
+https://cdn.jsdelivr.net/gh/gyrad/tinygallery/dist/tinygallery.min.js
+```
 
 Include `tinygallery.min.css` in the head section of your webpage:
 
 ```html
-<link rel="stylesheet" href="tinygallery.min.css">
+<link rel="stylesheet" href="/path/to/tinygallery.min.css">
 ```
 
 Include `tinygallery.min.js` at the bottom of the body of your webpage just before the closing `</body>` tag:
 
 ```html
-<script src="tinygallery.min.js"></script>
+<script src="/path/to/tinygallery.min.js"></script>
 ```
 
-Create a list of links to image files with enclosed thumbnails and add them to the body of your webpage, before including the **_tinygallery_** script:
+Create a list of links to image files with enclosed thumbnails and add them to the body of your webpage, before including the tinygallery script:
 
 ```html
 <div class="gallery">
@@ -34,11 +39,11 @@ Create a list of links to image files with enclosed thumbnails and add them to t
 </div>
 ```
 
-Add the following JavaScript code after including the **_tinygallery_** script, to display the images. Change the `'.gallery'` to the CSS selector that contains the list of linked images.
+Add the following JavaScript code after including the tinygallery script, to display the images. Change the `'.gallery'` to the CSS selector that contains the list of linked images.
 
 ```js
 <script>
-    const tg = new TinyGallery('.gallery');
-    tg.init();
+    const tiny = new TinyGallery('.gallery');
+    tiny.init();
 </script>
 ```
