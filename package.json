@@ -8,7 +8,15 @@
     "dev": "webpack --mode development",
     "start": "webpack-dev-server --mode development --open"
   },
-  "keywords": [],
+  "keywords": [
+    "gallery",
+    "tinygallery",
+    "tiny gallery",
+    "js gallery",
+    "pure javascript gallery",
+    "litebox",
+    "light box"
+  ],
   "author": "Tenzing Gaychey",
   "license": "ISC",
   "devDependencies": {
