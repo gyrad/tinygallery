@@ -4,9 +4,9 @@ A simple javascript image gallery.
 [Demo](https://gyrad.github.io/tinygallery/)
 
 ## Usage
-Copy the tinygallery.min.css and tinygallery.min.js to your website.
+Copy `tinygallery.min.css` and `tinygallery.min.js` to your website.
 
-Include the Gallery stylesheet in the head section of your webpage:
+Include the **_tinygallery_** stylesheet in the head section of your webpage:
 
 ```
 <link rel="stylesheet" href="tinygallery.min.css">
@@ -18,7 +18,7 @@ Include the Gallery script at the bottom of the body of your webpage:
 <script src="tinygallery.min.js"></script>
 ```
 
-Create a list of links to image files with enclosed thumbnails and add them to the body of your webpage, before including the <em>tinygallery</em> script:
+Create a list of links to image files with enclosed thumbnails and add them to the body of your webpage, before including the **_tinygallery_** script:
 
 ```
 <div class="gallery">
@@ -34,7 +34,7 @@ Create a list of links to image files with enclosed thumbnails and add them to t
 </div>
 ```
 
-Add the following JavaScript code after including the <em>tinygallery</em> script, to display the images. Change the '.gallery' to the CSS selector that contains the list of linked images.
+Add the following JavaScript code after including the **_tinygallery_** script, to display the images. Change the `'.gallery'` to the CSS selector that contains the list of linked images.
 
 ```
 <script>
