@@ -6,13 +6,13 @@ A simple javascript image gallery.
 ## Usage
 Copy `tinygallery.min.css` and `tinygallery.min.js` to your website.
 
-Include the **_tinygallery_** stylesheet in the head section of your webpage:
+Include `tinygallery.min.css` in the head section of your webpage:
 
 ```
 <link rel="stylesheet" href="tinygallery.min.css">
 ```
 
-Include the Gallery script at the bottom of the body of your webpage:
+Include `tinygallery.min.js` at the bottom of the body of your webpage just before the closing `</body>` tag:
 
 ```
 <script src="tinygallery.min.js"></script>
