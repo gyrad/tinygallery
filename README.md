@@ -20,7 +20,7 @@ Include `tinygallery.min.js` at the bottom of the body of your webpage just befo
 
 Create a list of links to image files with enclosed thumbnails and add them to the body of your webpage, before including the **_tinygallery_** script:
 
-```
+```html
 <div class="gallery">
     <a href="images/banana.jpg" title="Banana">
         <img src="images/thumbnails/banana.jpg" alt="Banana">
