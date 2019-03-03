@@ -1,5 +1,3 @@
-import Hammer from 'hammerjs';
-
 export default class TinyGallery {
     constructor(linkClass) {
         this.galleryLink = document.querySelectorAll(linkClass + ' a');
@@ -169,9 +167,9 @@ export default class TinyGallery {
         hammer.get('swipe').set({
             direction: Hammer.DIRECTION_ALL
         });
-        hammer.on('swiperight', this.showPrev);
-        hammer.on('swipeleft', this.showNext);
-        hammer.on('swipeup swipedown', this.closeLitebox);
+        hammer.on('swiperight', () => this.showPrev());
+        hammer.on('swipeleft', () => this.showNext());
+        hammer.on('swipeup swipedown', () => this.closeLitebox());
 
         // Fullscreen
         this.liteboxFullscreenBtn.addEventListener('click', () => {
