@@ -3,20 +3,25 @@ A simple javascript image gallery.
 
 [Demo](https://gyrad.github.io/tinygallery/)
 
-##Usage
+## Usage
 Copy the tinygallery.min.css and tinygallery.min.js to your website.
 
 Include the Gallery stylesheet in the head section of your webpage:
 
-`<link rel="stylesheet" href="tinygallery.min.css">`
+```
+<link rel="stylesheet" href="tinygallery.min.css">
+```
 
 Include the Gallery script at the bottom of the body of your webpage:
 
-`<script src="tinygallery.min.js"></script>`
+```
+<script src="tinygallery.min.js"></script>
+```
 
 Create a list of links to image files with enclosed thumbnails and add them to the body of your webpage, before including the <em>tinygallery</em> script:
 
-```<div class="gallery">
+```
+<div class="gallery">
     <a href="images/banana.jpg" title="Banana">
         <img src="images/thumbnails/banana.jpg" alt="Banana">
     </a>
@@ -31,7 +36,8 @@ Create a list of links to image files with enclosed thumbnails and add them to t
 
 Add the following JavaScript code after including the <em>tinygallery</em> script, to display the images. Change the '.gallery' to the CSS selector that contains the list of linked images.
 
-```<script>
+```
+<script>
     const tg = new TinyGallery('.gallery');
     tg.init();
 </script>
