@@ -5,7 +5,7 @@ A simple javascript image gallery.
 
 ## Usage
 Copy `tinygallery.min.css` and `tinygallery.min.js` from the [/dist](dist/) folder to your website.
-Alternatively, you can link to those files hosted on a CDN:
+Alternatively, you can link to these files hosted on a CDN:
 ```
 https://cdn.jsdelivr.net/gh/gyrad/tinygallery/dist/tinygallery.min.css
 https://cdn.jsdelivr.net/gh/gyrad/tinygallery/dist/tinygallery.min.js
