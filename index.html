@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="tinygallery.min.css">
+    <title>TinyGallery Demo</title>
+</head>
+
+<body>
+
+    <h1>TinyGallery Demo</h1>
+    <p>Image gallery written in plain old Vanilla JS. <br>
+        <a href="https://github.com/gyrad/tinygallery">Source Code</a> | <a href="https://github.com/gyrad/tinygallery/blob/master/README.md">Usage</a></p>
+
+    <div class="gallery">
+        <a href="https://images.pexels.com/photos/545968/pexels-photo-545968.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            class="gallery__link">
+            <img src="https://images.pexels.com/photos/545968/pexels-photo-545968.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
+                alt="Sunset by the lake." class="gallery__image" data-caption="The beautiful sky at sunset from our lakehouse.">
+        </a>
+
+        <a href="https://images.pexels.com/photos/591216/pexels-photo-591216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
+            class="gallery__link">
+            <img src="https://images.pexels.com/photos/591216/pexels-photo-591216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
+                alt="Hiking through the woods." class="gallery__image" data-caption="Tenzin and Sonam hiking through the woods.">
+        </a>
+
+        <a href="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            class="gallery__link">
+            <img src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
+                alt="Mountain peak." class="gallery__image" data-caption="The majestic Fishtail mountain.">
+        </a>
+
+        <a href="https://studentsforafreetibet.org/wp-content/uploads/2019/02/51847138_863911540667580_315981560010506240_n.jpg"
+            class="gallery__link">
+            <img src="https://studentsforafreetibet.org/wp-content/uploads/2019/02/51847138_863911540667580_315981560010506240_n.jpg"
+                alt="AOC at the Tibetan New Year program." class="gallery__image" data-caption="AOC at the Tibetan New Year program.">
+        </a>
+
+        <a href="https://images.pexels.com/photos/206660/pexels-photo-206660.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            class="gallery__link">
+            <img src="https://images.pexels.com/photos/206660/pexels-photo-206660.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
+                class="gallery__image">
+        </a>
+
+        <a href="https://images.pexels.com/photos/250411/pexels-photo-250411.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            class="gallery__link">
+            <img src="https://images.pexels.com/photos/250411/pexels-photo-250411.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
+                alt="Busy beach." class="gallery__image" data-caption="The Kanchanjunga during sunrise.">
+        </a>
+
+        <a href="https://images.pexels.com/photos/315191/pexels-photo-315191.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            class="gallery__link">
+            <img src="https://images.pexels.com/photos/315191/pexels-photo-315191.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
+                class="gallery__image" data-caption="A cold and rainy Tokyo evening.">
+        </a>
+
+        <a href="https://images.pexels.com/photos/259772/pexels-photo-259772.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            class="gallery__link">
+            <img src="https://images.pexels.com/photos/259772/pexels-photo-259772.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
+                alt="Busy beach." class="gallery__image" data-caption="A Japanese village with the backdrop of a dormant volcano.">
+        </a>
+
+    </div>
+
+
+    <p>
+        <h2>Features include:</h2>
+        <ul>
+            <li>Browse the gallery of images by clicking on the arrows.</li>
+            <li>Left/right arrows appear disabled when end of list is reached.</li>
+            <li>Keyboard shortcuts:
+                <ul>
+                    <li>[Left/right keys] - Browse image gallery.</li>
+                    <li>[ESC] - Close gallery or escape from fullscreen.</li>
+                    <li>[F] - Enter fullscreen mode.</li>
+                </ul>
+            </li>
+            <li>Add captions via the <code>data-caption</code> attribute on the image.</li>
+            <li>Auto-hide gallery navigation after 3 secs of inactivity to allow unobstructed view of image.</li>
+            <li>Fullscreen capability.</li>
+            <li>Swiping capability added, thanks to <a href="https://hammerjs.github.io/" target="_blank">Hammer.js</a></li>
+        </ul>
+    </p>
+
+    <script src="tinygallery.min.js"></script>
+    <script>
+        const tg = new TinyGallery('.gallery');
+        tg.init();
+    </script>
+</body>
+
+</html>
