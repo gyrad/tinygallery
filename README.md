@@ -6,15 +6,24 @@ A simple javascript image gallery.
 
 [Demo](https://gyrad.github.io/tinygallery/)
 
+## Installation
+
+### From NPM
+
+```console
+$ npm install tinygallery
+```
+
+### Download from Github or use a CDN
+
+Copy `tinygallery.min.css` and `tinygallery.min.js` from the [/dist](dist/) folder to your website. Alternatively, you can link to these files hosted on a CDN:
+
+```
+https://raw.githack.com/gyrad/tinygallery/master/dist/tinygallery.min.css
+https://raw.githack.com/gyrad/tinygallery/master/dist/tinygallery.min.js
+```
+
 ## Usage
-
-Copy `tinygallery.min.css` and `tinygallery.min.js` from the [/dist](dist/) folder to your website.
-Alternatively, you can link to these files hosted on a CDN:
-
-```
-https://cdn.jsdelivr.net/gh/gyrad/tinygallery/dist/tinygallery.min.css
-https://cdn.jsdelivr.net/gh/gyrad/tinygallery/dist/tinygallery.min.js
-```
 
 Include `tinygallery.min.css` in the head section of your webpage:
 

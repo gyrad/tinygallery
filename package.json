@@ -1,7 +1,7 @@
 {
   "name": "tinygallery",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.1.1",
+  "description": "A simple Javascript image gallery.",
   "main": "dist/tinygallery.min.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -18,9 +18,13 @@
     "litebox",
     "light box"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gyrad/tinygallery.git"
+  },
   "author": "Tenzing Gaychey",
   "license": "ISC",
-  "homepage": "https://gyrad.github.io/tinygallery",
+  "homepage": "https://tenzinggaychey.com/tinygallery",
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
