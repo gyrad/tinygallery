@@ -26,18 +26,26 @@ Include `tinygallery.min.js` at the bottom of the body of your webpage just befo
 <script src="/path/to/tinygallery.min.js"></script>
 ```
 
-Create a list of links to image files with enclosed thumbnails and add them to the body of your webpage. The root div _MUST_ have the `class="tinygallery"` and the id set to any unique name:
+Create a list of links to image files with enclosed thumbnails and add them to the body of your webpage. The root div **MUST** have `class="tinygallery"` and also an `id` set to a unique name. You can also add the `data-caption` attribute to show a caption underneath the image.
 
 ```html
 <div class="tinygallery" id="my_main_gallery">
-  <a href="images/banana.jpg" title="Banana">
-    <img src="images/thumbnails/banana.jpg" alt="Banana" />
+  <a href="images/lhasa.jpg">
+    <img
+      src="images/thumbnails/lhasa.jpg"
+      alt="Lhasa"
+      data-caption="A view of Lhasa, the capital of Tibet."
+    />
   </a>
-  <a href="images/apple.jpg" title="Apple">
-    <img src="images/thumbnails/apple.jpg" alt="Apple" />
+  <a href="images/potala.jpg">
+    <img src="images/thumbnails/potala.jpg" alt="Potala Palace" />
   </a>
-  <a href="images/orange.jpg" title="Orange">
-    <img src="images/thumbnails/orange.jpg" alt="Orange" />
+  <a href="images/tibet.jpg">
+    <img
+      src="images/thumbnails/tibet.jpg"
+      alt="Tibet"
+      data-caption="An aerial view of Tibet, the roof of the world."
+    />
   </a>
 </div>
 ```
