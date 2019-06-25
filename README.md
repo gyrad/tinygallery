@@ -61,7 +61,7 @@ Create a list of links to image files with enclosed thumbnails and add them to t
 </div>
 ```
 
-Add the following JavaScript code after including the tinygallery script, to initialize the gallery. Change the `'my_main_gallery'` to the CSS selector that contains the list of linked images.
+Add the following JavaScript code after including the tinygallery script, to initialize the gallery. Change the `'my_main_gallery'` to the id of the div that contains the list of linked images.
 
 <!-- prettier-ignore -->
 ```js
