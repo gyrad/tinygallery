@@ -1,40 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="tinygallery.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="tinygallery.min.css" />
     <title>TinyGallery</title>
-</head>
+  </head>
 
-<body>
-    <div class="gallery">
-        <a href="https://images.pexels.com/photos/545968/pexels-photo-545968.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            class="gallery__link">
-            <img src="https://images.pexels.com/photos/545968/pexels-photo-545968.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
-                alt="Sunset by the lake." class="gallery__image" data-caption="The beautiful sky at sunset from our lakehouse.">
-        </a>
+  <body>
+    <div class="tinygallery" id="top-gallery">
+      <a
+        href="https://images.pexels.com/photos/545968/pexels-photo-545968.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      >
+        <img
+          src="https://images.pexels.com/photos/545968/pexels-photo-545968.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
+          alt="Sunset by the lake."
+          data-caption="The beautiful sky at sunset from our lakehouse."
+        />
+      </a>
 
-        <a href="https://images.pexels.com/photos/591216/pexels-photo-591216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
-            class="gallery__link">
-            <img src="https://images.pexels.com/photos/591216/pexels-photo-591216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
-                alt="Hiking through the woods." class="gallery__image" data-caption="Tenzin and Sonam hiking through the woods.">
-        </a>
+      <a
+        href="https://images.pexels.com/photos/591216/pexels-photo-591216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
+      >
+        <img
+          src="https://images.pexels.com/photos/591216/pexels-photo-591216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
+          alt="Hiking through the woods."
+          data-caption="Tenzin and Sonam hiking through the woods."
+        />
+      </a>
 
-        <a href="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            class="gallery__link">
-            <img src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
-                alt="Mountain peak." class="gallery__image" data-caption="The majestic Fishtail mountain.">
-        </a>
+      <a
+        href="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      >
+        <img
+          src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
+          alt="Mountain peak."
+          data-caption="The majestic Fishtail mountain."
+        />
+      </a>
+    </div>
+
+    <div class="tinygallery" id="bottom-gallery">
+      <a
+        href="https://images.pexels.com/photos/545968/pexels-photo-545968.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      >
+        <img
+          src="https://images.pexels.com/photos/545968/pexels-photo-545968.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
+          alt="Sunset by the lake."
+          data-caption="The beautiful sky at sunset from our lakehouse."
+        />
+      </a>
+
+      <a
+        href="https://images.pexels.com/photos/591216/pexels-photo-591216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
+      >
+        <img
+          src="https://images.pexels.com/photos/591216/pexels-photo-591216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=357&w=600"
+          alt="Hiking through the woods."
+          data-caption="Tenzin and Sonam hiking through the woods."
+        />
+      </a>
     </div>
 
     <script src="tinygallery.min.js"></script>
     <script>
-        const tg = new TinyGallery('.gallery');
-        tg.init();
-    </script>
-</body>
+      const topg = new TinyGallery('top-gallery');
+      topg.init();
 
+      const bottomg = new TinyGallery('bottom-gallery');
+      bottomg.init();
+    </script>
+  </body>
 </html>
