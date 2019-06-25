@@ -52,10 +52,15 @@ Create a list of links to image files with enclosed thumbnails and add them to t
 
 Add the following JavaScript code after including the tinygallery script, to initialize the gallery. Change the `'my_main_gallery'` to the CSS selector that contains the list of linked images.
 
+<!-- prettier-ignore -->
 ```js
 <script>
-  const my_gallery = new TinyGallery('my_main_gallery'); my_gallery.init(); //
-  You can also add more than one gallery. const another_gallery = new
-  TinyGallery('my_other_gallery'); another_gallery.init();
+  const my_gallery = new TinyGallery('my_main_gallery'); 
+  my_gallery.init(); 
+  
+  // You can also add more than one gallery. 
+  const another_gallery = new
+  TinyGallery('my_other_gallery'); 
+  another_gallery.init();
 </script>
 ```
