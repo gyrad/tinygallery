@@ -2,6 +2,8 @@
 
 A simple javascript image gallery.
 
+![Demo](tinygallery-screengrab.gif)
+
 [Demo](https://gyrad.github.io/tinygallery/)
 
 ## Usage
