@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54843621-6"></script>
     <script>
@@ -18,6 +17,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="tinygallery.min.css">
     <title>TinyGallery Demo</title>
+    
+    <style>
+    .shameless-plug {
+    font-size: 0.8rem;
+    position: fixed;
+    bottom: 1rem;
+    right: 2px;
+    transform: rotate(90deg);
+    transform-origin: top right;
+    }
+
+    .shameless-plug i {
+      color: tomato;
+      animation-name: heart;
+      animation-duration: 3s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+    }
+    </style>
 </head>
 
 <body>
@@ -88,6 +106,17 @@
             <li>Display multiple galleries on the same page using unique id attributes.</li>
         </ul>
     </p>
+
+    <div className="shameless-plug">
+        Made with <i className="fas fa-heart" /> by&nbsp;
+        <a
+          href="http://tenzinggaychey.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Gaychey
+        </a>
+      </div>
 
     <script src="tinygallery.min.js"></script>
     <script>
