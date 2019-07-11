@@ -277,9 +277,11 @@ export default class TinyGallery {
       // Change color of arrow to faded once it has reached end of list
       this.disabledArrow();
 
-      document.addEventListener('mousemove', e => this.autohideNav(e));
-      document.addEventListener('keydown', e => this.autohideNav(e));
-      document.addEventListener('touchstart', e => this.autohideNav(e));
+      if (this.openState) {
+        document.addEventListener('mousemove', e => this.autohideNav(e));
+        document.addEventListener('keydown', e => this.autohideNav(e));
+        document.addEventListener('touchstart', e => this.autohideNav(e));
+      }
     } catch (err) {
       console.log('Closed before the next image could be computed.');
     }
