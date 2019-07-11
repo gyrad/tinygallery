@@ -114,7 +114,7 @@ export default class TinyGallery {
   }
 
   toggleFullscreen() {
-    if (!this.isFullscreen) {
+    if (!this.isFullscreen && this.openState) {
       // fullscreen now
       this.isFullscreen = true;
       this.liteboxFullscreenBtn.innerHTML =
@@ -130,7 +130,7 @@ export default class TinyGallery {
       } else if (document.documentElement.msRequestFullscreen) {
         document.documentElement.msRequestFullscreen();
       }
-    } else {
+    } else if (this.isFullscreen && this.openState) {
       // not fullscreen now
       this.isFullscreen = false;
       this.liteboxFullscreenBtn.innerHTML =
@@ -293,6 +293,7 @@ export default class TinyGallery {
     this.liteboxCloseBtn.style.opacity = 1;
     this.liteboxFullscreenBtn.style.opacity = 1;
     this.liteboxImageIndex.style.opacity = 1;
+    this.liteboxGradientBG.style.opacity = 1;
     //Hide nav
     clearTimeout(this.mouseTimer); //resets setTimeout everytime event is triggered
     this.mouseTimer = setTimeout(() => {
@@ -302,6 +303,7 @@ export default class TinyGallery {
       this.liteboxCloseBtn.style.opacity = 0;
       this.liteboxFullscreenBtn.style.opacity = 0;
       this.liteboxImageIndex.style.opacity = 0;
+      this.liteboxGradientBG.style.opacity = 0;
     }, 3 * 1000);
     e.stopImmediatePropagation();
   }
@@ -354,6 +356,14 @@ export default class TinyGallery {
       document.createElement(`div`)
     );
     this.liteboxContainer.classList.add(`litebox__container`, this.liteboxId);
+
+    this.liteboxGradientBG = this.litebox.appendChild(
+      document.createElement(`div`)
+    );
+    this.liteboxGradientBG.classList.add(
+      `litebox__gradient-bg`,
+      this.liteboxId
+    );
 
     this.liteboxCloseBtn = this.litebox.appendChild(
       document.createElement(`div`)
