@@ -289,25 +289,69 @@ export default class TinyGallery {
 
   autohideNav(e) {
     // Show nav
-    this.liteboxCaption.style.opacity = 1;
-    this.liteboxPrevBtn.style.opacity = 1;
-    this.liteboxNextBtn.style.opacity = 1;
-    this.liteboxCloseBtn.style.opacity = 1;
-    this.liteboxFullscreenBtn.style.opacity = 1;
-    this.liteboxImageIndex.style.opacity = 1;
-    this.liteboxGradientBG.style.opacity = 1;
+    // this.liteboxCaption.style.opacity = 1;
+    // this.liteboxPrevBtn.style.opacity = 1;
+    // this.liteboxNextBtn.style.opacity = 1;
+    // this.liteboxCloseBtn.style.opacity = 1;
+    // this.liteboxFullscreenBtn.style.opacity = 1;
+    // this.liteboxImageIndex.style.opacity = 1;
+    // this.liteboxGradientBG.style.opacity = 1;
+
+    document.querySelector(
+      `#${this.liteboxId} .litebox__caption`
+    ).style.opacity = 1;
+    document.querySelector(
+      `#${this.liteboxId} .litebox__prev-btn`
+    ).style.opacity = 1;
+    document.querySelector(
+      `#${this.liteboxId} .litebox__next-btn`
+    ).style.opacity = 1;
+    document.querySelector(
+      `#${this.liteboxId} .litebox__close-btn`
+    ).style.opacity = 1;
+    document.querySelector(
+      `#${this.liteboxId} .litebox__fullscreen-btn`
+    ).style.opacity = 1;
+    document.querySelector(
+      `#${this.liteboxId} .litebox__image-index`
+    ).style.opacity = 1;
+    document.querySelector(
+      `#${this.liteboxId} .litebox__gradient-bg`
+    ).style.opacity = 1;
+
     //Hide nav
     clearTimeout(this.mouseTimer); //resets setTimeout everytime event is triggered
     this.mouseTimer = setTimeout(() => {
-      this.liteboxCaption.style.opacity = 0;
-      this.liteboxPrevBtn.style.opacity = 0;
-      this.liteboxNextBtn.style.opacity = 0;
-      this.liteboxCloseBtn.style.opacity = 0;
-      this.liteboxFullscreenBtn.style.opacity = 0;
-      this.liteboxImageIndex.style.opacity = 0;
-      this.liteboxGradientBG.style.opacity = 0;
+      // this.liteboxCaption.style.opacity = 0;
+      // this.liteboxPrevBtn.style.opacity = 0;
+      // this.liteboxNextBtn.style.opacity = 0;
+      // this.liteboxCloseBtn.style.opacity = 0;
+      // this.liteboxFullscreenBtn.style.opacity = 0;
+      // this.liteboxImageIndex.style.opacity = 0;
+      // this.liteboxGradientBG.style.opacity = 0;
+      document.querySelector(
+        `#${this.liteboxId} .litebox__caption`
+      ).style.opacity = 0;
+      document.querySelector(
+        `#${this.liteboxId} .litebox__prev-btn`
+      ).style.opacity = 0;
+      document.querySelector(
+        `#${this.liteboxId} .litebox__next-btn`
+      ).style.opacity = 0;
+      document.querySelector(
+        `#${this.liteboxId} .litebox__close-btn`
+      ).style.opacity = 0;
+      document.querySelector(
+        `#${this.liteboxId} .litebox__fullscreen-btn`
+      ).style.opacity = 0;
+      document.querySelector(
+        `#${this.liteboxId} .litebox__image-index`
+      ).style.opacity = 0;
+      document.querySelector(
+        `#${this.liteboxId} .litebox__gradient-bg`
+      ).style.opacity = 0;
     }, 3 * 1000);
-    e.stopImmediatePropagation();
+    // e.stopImmediatePropagation();
   }
 
   disabledArrow(opacity) {
