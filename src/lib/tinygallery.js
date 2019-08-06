@@ -355,17 +355,18 @@ export default class TinyGallery {
   }
 
   disabledArrow(opacity) {
+    this.liteboxPrevBtn.style.borderColor = 'white';
+    this.liteboxPrevBtn.style.cursor = 'pointer';
+    this.liteboxNextBtn.style.borderColor = 'white';
+    this.liteboxNextBtn.style.cursor = 'pointer';
+
     if (this.index === 0) {
       this.liteboxPrevBtn.style.borderColor = '#888';
       this.liteboxPrevBtn.style.cursor = 'not-allowed';
-    } else if (this.index === this.galleryLink.length - 1) {
+    }
+    if (this.index === this.galleryLink.length - 1) {
       this.liteboxNextBtn.style.borderColor = '#888';
       this.liteboxNextBtn.style.cursor = 'not-allowed';
-    } else {
-      this.liteboxPrevBtn.style.borderColor = 'white';
-      this.liteboxPrevBtn.style.cursor = 'pointer';
-      this.liteboxNextBtn.style.borderColor = 'white';
-      this.liteboxNextBtn.style.cursor = 'pointer';
     }
   }
 
