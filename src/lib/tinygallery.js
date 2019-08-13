@@ -23,6 +23,8 @@ export default class TinyGallery {
     // renders litebox to DOM
     this.render();
 
+    this.loadImages();
+
     // Loop through items in the gallery and add these set of instructions to each image
     for (let i = 0; i < this.galleryLink.length; i++) {
       // Add click handler to open the litebox
@@ -55,6 +57,15 @@ export default class TinyGallery {
     }
 
     this.events();
+  }
+
+  // Image preloader. Starts preload only after entire page has rendered.
+  loadImages() {
+    window.addEventListener('load', () => {
+      for (let i = 0; i < this.galleryLink.length; i++) {
+        fetch(this.galleryLink[i].getAttribute('href'));
+      }
+    });
   }
 
   closeLitebox() {
