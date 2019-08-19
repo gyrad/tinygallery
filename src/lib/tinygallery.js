@@ -43,14 +43,14 @@ export default class TinyGallery {
         this.showCaption(i);
 
         // Prevents bubbling/closure of litebox when the image or caption is clicked
-        this.liteboxImage.addEventListener('click', e => {
-          e.stopPropagation();
-          console.log('liteboxImage propagation stopped');
-        });
-        this.liteboxCaption.addEventListener('click', e => {
-          e.stopPropagation();
-          console.log('caption propagation stopped');
-        });
+        // this.liteboxImage.addEventListener('click', e => {
+        //   e.stopPropagation();
+        //   console.log('liteboxImage propagation stopped');
+        // });
+        // this.liteboxCaption.addEventListener('click', e => {
+        //   e.stopPropagation();
+        //   console.log('caption propagation stopped');
+        // });
       });
     }
 
@@ -78,6 +78,8 @@ export default class TinyGallery {
       this.index = undefined;
     }
   }
+
+  zoomIn() {}
 
   showPrev() {
     if (this.openState) {
@@ -117,8 +119,23 @@ export default class TinyGallery {
     if (!this.isFullscreen && this.openState) {
       // fullscreen now
       this.isFullscreen = true;
-      this.liteboxFullscreenBtn.innerHTML =
-        '<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 192 192" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"></path><g fill="#ffffff"><path d="M63.9,25.5125c-3.5297,0.05517 -6.34834,2.9577 -6.3,6.4875v25.6h-25.6c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h32c3.53448,-0.00035 6.39965,-2.86552 6.4,-6.4v-32c0.02369,-1.72992 -0.65393,-3.39575 -1.87846,-4.61793c-1.22453,-1.22218 -2.89166,-1.89659 -4.62154,-1.86957zM127.9,25.5125c-3.5297,0.05517 -6.34834,2.9577 -6.3,6.4875v32c0.00035,3.53448 2.86552,6.39965 6.4,6.4h32c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359h-25.6v-25.6c0.02369,-1.72992 -0.65393,-3.39575 -1.87846,-4.61793c-1.22453,-1.22218 -2.89166,-1.89659 -4.62154,-1.86957zM32,121.6c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h25.6v25.6c-0.03264,2.30807 1.18,4.45492 3.17359,5.61848c1.99358,1.16356 4.45924,1.16356 6.45283,0c1.99358,-1.16356 3.20623,-3.31041 3.17359,-5.61848v-32c-0.00035,-3.53448 -2.86552,-6.39965 -6.4,-6.4zM128,121.6c-3.53448,0.00035 -6.39965,2.86552 -6.4,6.4v32c-0.03264,2.30807 1.18,4.45492 3.17359,5.61848c1.99358,1.16356 4.45924,1.16356 6.45283,0c1.99358,-1.16356 3.20623,-3.31041 3.17359,-5.61848v-25.6h25.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359z"></path></g></g></svg>';
+      this.liteboxFullscreenBtn.innerHTML = `<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve">
+     <style type="text/css">
+       .st0{fill:#FFFFFF;}
+     </style>
+     <g>
+       <g id="fullscreen_x5F_exit">
+         <g>
+           <polygon class="st0" points="294.1,328.5 348.9,383.4 382.8,349.6 327.9,294.7 382.8,239.8 239.2,239.8 239.2,383.4 			"/>
+           <polygon class="st0" points="0,144.2 143.5,144.2 143.5,0.6 88.7,55.5 34.4,1.1 0.6,35 54.9,89.3 			"/>
+           <polygon class="st0" points="0,349.6 33.8,383.4 88.7,328.5 143.5,383.4 143.5,239.8 0,239.8 54.9,294.7 			"/>
+           <polygon class="st0" points="239.2,144.2 382.8,144.2 327.9,89.3 382.3,35 348.5,1.1 294.1,55.5 239.2,0.6 			"/>
+         </g>
+       </g>
+     </g>
+     </svg>
+     `;
       if (document.documentElement.requestFullScreen) {
         document.documentElement.requestFullScreen();
       } else if (document.documentElement.mozRequestFullScreen) {
@@ -133,8 +150,22 @@ export default class TinyGallery {
     } else if (this.isFullscreen && this.openState) {
       // not fullscreen now
       this.isFullscreen = false;
-      this.liteboxFullscreenBtn.innerHTML =
-        '<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 192 192" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"></path><g fill="#ffffff"><path d="M38.4,25.6c-6.9956,0 -12.8,5.8044 -12.8,12.8v25.6c-0.03264,2.30807 1.18,4.45492 3.17359,5.61848c1.99358,1.16356 4.45924,1.16356 6.45283,0c1.99358,-1.16356 3.20623,-3.31041 3.17359,-5.61848v-25.6h25.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359zM128,25.6c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h25.6v25.6c-0.03264,2.30807 1.18,4.45492 3.17359,5.61848c1.99358,1.16356 4.45924,1.16356 6.45283,0c1.99358,-1.16356 3.20623,-3.31041 3.17359,-5.61848v-25.6c0,-6.9956 -5.8044,-12.8 -12.8,-12.8zM31.9,121.5125c-3.5297,0.05517 -6.34834,2.9577 -6.3,6.4875v25.6c0,6.9956 5.8044,12.8 12.8,12.8h25.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359h-25.6v-25.6c0.02369,-1.72992 -0.65393,-3.39575 -1.87846,-4.61793c-1.22453,-1.22218 -2.89166,-1.89659 -4.62154,-1.86957zM159.9,121.5125c-3.5297,0.05517 -6.34834,2.9577 -6.3,6.4875v25.6h-25.6c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h25.6c6.9956,0 12.8,-5.8044 12.8,-12.8v-25.6c0.02369,-1.72992 -0.65393,-3.39575 -1.87846,-4.61793c-1.22453,-1.22218 -2.89166,-1.89659 -4.62154,-1.86957z"></path></g></g></svg>';
+      this.liteboxFullscreenBtn.innerHTML = `<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve">
+     <style type="text/css">
+       .st0{fill:#FFFFFF;}
+     </style>
+     <g>
+       <g>
+         <g>
+           <polygon class="st0" points="110.3,243.5 49,305 0,256 0,384 128,384 79,335 140.5,273.7 			"/>
+           <polygon class="st0" points="128,0 0,0 0,128 49,79 110.3,140.5 140.5,110.3 79,49 			"/>
+           <polygon class="st0" points="256,0 305,49 243.5,110.3 273.7,140.5 335,79 384,128 384,0 			"/>
+           <polygon class="st0" points="273.7,243.5 243.5,273.7 305,335 256,384 384,384 384,256 335,305 			"/>
+         </g>
+       </g>
+     </g>
+     </svg>`;
       if (document.cancelFullScreen) {
         document.cancelFullScreen();
       } else if (document.mozCancelFullScreen) {
@@ -416,7 +447,16 @@ export default class TinyGallery {
       document.createElement(`div`)
     );
     this.liteboxCloseBtn.classList.add(`litebox__close-btn`, this.liteboxId);
-    this.liteboxCloseBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 192 192" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"></path><g fill="#ffffff"><path d="M51.0625,38.275c-5.20634,0.00645 -9.89015,3.1654 -11.8469,7.99004c-1.95675,4.82464 -0.7966,10.35375 2.9344,13.98496l35.75,35.75l-35.75,35.75c-3.34383,3.21046 -4.6908,7.97781 -3.52143,12.46344c1.16937,4.48563 4.67237,7.98862 9.15799,9.15799c4.48563,1.16937 9.25297,-0.1776 12.46343,-3.52143l35.75,-35.75l35.75,35.75c3.21045,3.34388 7.97782,4.69089 12.46348,3.52152c4.48566,-1.16937 7.98867,-4.67238 9.15804,-9.15804c1.16937,-4.48566 -0.17764,-9.25302 -3.52152,-12.46348l-35.75,-35.75l35.75,-35.75c3.78573,-3.67989 4.92402,-9.30644 2.86636,-14.16848c-2.05765,-4.86204 -6.88913,-7.96214 -12.16636,-7.80652c-3.32542,0.09909 -6.48164,1.4889 -8.8,3.875l-35.75,35.75l-35.75,-35.75c-2.41289,-2.48033 -5.72714,-3.87818 -9.1875,-3.875z"></path></g></g></svg>`;
+    this.liteboxCloseBtn.setAttribute('title', 'Close (Esc)');
+    this.liteboxCloseBtn.innerHTML = `<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve">
+ <style type="text/css">
+   .st0{fill:#FFFFFF;}
+ </style>
+ <polygon class="st0" points="383.4,37.4 346.6,0.6 192,155.2 37.4,0.6 0.6,37.4 155.2,192 0.6,346.6 37.4,383.4 192,228.8 
+   346.6,383.4 383.4,346.6 228.8,192 "/>
+ </svg>
+ `;
 
     this.liteboxFullscreenBtn = this.litebox.appendChild(
       document.createElement(`div`)
@@ -425,7 +465,23 @@ export default class TinyGallery {
       `litebox__fullscreen-btn`,
       this.liteboxId
     );
-    this.liteboxFullscreenBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 192 192" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"></path><g fill="#ffffff"><path d="M38.4,25.6c-6.9956,0 -12.8,5.8044 -12.8,12.8v25.6c-0.03264,2.30807 1.18,4.45492 3.17359,5.61848c1.99358,1.16356 4.45924,1.16356 6.45283,0c1.99358,-1.16356 3.20623,-3.31041 3.17359,-5.61848v-25.6h25.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359zM128,25.6c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h25.6v25.6c-0.03264,2.30807 1.18,4.45492 3.17359,5.61848c1.99358,1.16356 4.45924,1.16356 6.45283,0c1.99358,-1.16356 3.20623,-3.31041 3.17359,-5.61848v-25.6c0,-6.9956 -5.8044,-12.8 -12.8,-12.8zM31.9,121.5125c-3.5297,0.05517 -6.34834,2.9577 -6.3,6.4875v25.6c0,6.9956 5.8044,12.8 12.8,12.8h25.6c2.30807,0.03264 4.45492,-1.18 5.61848,-3.17359c1.16356,-1.99358 1.16356,-4.45924 0,-6.45283c-1.16356,-1.99358 -3.31041,-3.20623 -5.61848,-3.17359h-25.6v-25.6c0.02369,-1.72992 -0.65393,-3.39575 -1.87846,-4.61793c-1.22453,-1.22218 -2.89166,-1.89659 -4.62154,-1.86957zM159.9,121.5125c-3.5297,0.05517 -6.34834,2.9577 -6.3,6.4875v25.6h-25.6c-2.30807,-0.03264 -4.45492,1.18 -5.61848,3.17359c-1.16356,1.99358 -1.16356,4.45924 0,6.45283c1.16356,1.99358 3.31041,3.20623 5.61848,3.17359h25.6c6.9956,0 12.8,-5.8044 12.8,-12.8v-25.6c0.02369,-1.72992 -0.65393,-3.39575 -1.87846,-4.61793c-1.22453,-1.22218 -2.89166,-1.89659 -4.62154,-1.86957z"></path></g></g></svg>`;
+    this.liteboxFullscreenBtn.setAttribute('title', 'Fullscreen (F)');
+    this.liteboxFullscreenBtn.innerHTML = `<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve">
+ <style type="text/css">
+   .st0{fill:#FFFFFF;}
+ </style>
+ <g>
+   <g>
+     <g>
+       <polygon class="st0" points="110.3,243.5 49,305 0,256 0,384 128,384 79,335 140.5,273.7 			"/>
+       <polygon class="st0" points="128,0 0,0 0,128 49,79 110.3,140.5 140.5,110.3 79,49 			"/>
+       <polygon class="st0" points="256,0 305,49 243.5,110.3 273.7,140.5 335,79 384,128 384,0 			"/>
+       <polygon class="st0" points="273.7,243.5 243.5,273.7 305,335 256,384 384,384 384,256 335,305 			"/>
+     </g>
+   </g>
+ </g>
+ </svg>`;
 
     this.liteboxLoader = this.litebox.appendChild(
       document.createElement(`div`)

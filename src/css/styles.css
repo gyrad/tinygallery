@@ -113,14 +113,17 @@ h1 {
     height: 50%;
     position: fixed;
     transition: opacity 0.4s ease;
+    pointer-events: none;
   }
 
   &__close-btn {
     position: fixed;
     top: 1rem;
     right: 1rem;
+    width: 1rem;
+    height: 1rem;
     z-index: 100;
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: white;
     cursor: pointer;
     transition: opacity $transitionTime ease;
@@ -129,8 +132,10 @@ h1 {
 
   &__fullscreen-btn {
     position: fixed;
-    top: 1.15rem;
+    top: 1rem;
     right: 3rem;
+    width: 1rem;
+    height: au1remto;
     z-index: 100;
     font-size: 1rem;
     cursor: pointer;
@@ -218,6 +223,7 @@ h1 {
   }
 
   &__caption {
+    user-select: text;
     position: fixed;
     bottom: 1rem;
     left: 50%;
