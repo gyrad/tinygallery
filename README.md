@@ -1,5 +1,7 @@
 # TinyGallery
 
+[![npm version](http://img.shields.io/npm/v/tinygallery.svg?style=flat)](https://npmjs.org/package/tinygallery 'View this project on npm') [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+
 A simple javascript image gallery.
 
 ![Demo](tinygallery-screengrab.gif)
